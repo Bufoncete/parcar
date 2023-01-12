@@ -11,24 +11,24 @@ import java.awt.Color;
 public class Car
 {
     // Attributes of the class Car
-    static int numberWheels = 4;                // Number of wheels                           
-    
+    static int numberWheels = 4;                // Number of wheels
+
     Garage theGarage=null;
 
-    
+
     /**
      * Constructor of a car specifying the garage object
      */
     public Car (Garage g){
-    	theGarage = g;
+        theGarage = g;
     }
     /**
      * Method that is being always invoked when the program is running
-     * @throws InterruptedException 
+     * @throws InterruptedException
      */
     public static void main(String[] args) throws InterruptedException{
-    	Garage g = new Garage();
-    	Car car = new Car(g);
+        Garage g = new Garage();
+        Car car = new Car(g);
         car.accelerate();
         slowDown();
         moveDown();
@@ -37,52 +37,55 @@ public class Car
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
-    }    
+    }
+
+    private void printGarage() {
+
+    }
 
     /**
      * Accelerate the car
-     * @throws InterruptedException 
+     * @throws InterruptedException
      */
-    public void accelerate() throws InterruptedException{
+    public static void accelerate() throws InterruptedException{
         String c = new String("*");
         String space = new String(" ");
-    	for(int i=0; i<5; i++)
+        for(int i=0; i<5; i++)
         {
-        	System.out.print(c);
-        	c = space.concat(c);
-        	Thread.sleep(1000);
+            System.out.print(c);
+            c = space.concat(c);
+            Thread.sleep(1000);
         }
     }
-    
+
     /**
      * Slow down the car
-     * @throws InterruptedException 
+     * @throws InterruptedException
      */
-    public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
-    	for(int i=0; i<5; i++)
+    public static void slowDown() throws InterruptedException{
+        String c = new String("     *");
+        for(int i=0; i<5; i++)
         {
-        	System.out.print(c);
-        	c = c.substring(1);
-        	Thread.sleep(1000);
+            System.out.print(c);
+            c = c.substring(1);
+            Thread.sleep(1000);
         }
-    	System.out.println();
-    }    
-    
+        System.out.println();
+    }
+
     /**
      * Move the car downwards
-     * @throws InterruptedException 
-     */    
-    public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+     * @throws InterruptedException
+     */
+    public static void moveDown() throws InterruptedException{
+        String c = new String("\t\t\t\t  *");
+        for(int i=0; i<5; i++)
         {
-    		if(i!=4)
-    			System.out.println(c);
-    		else 
-    			System.out.print(c);
-        	Thread.sleep(1000);
+            if(i!=4)
+                System.out.println(c);
+            else
+                System.out.print(c);
+            Thread.sleep(1000);
         }
     }
-    
 }
