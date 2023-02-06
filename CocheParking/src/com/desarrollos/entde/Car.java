@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.awt.Color;
 /**
  * Class that models objects of type "car"
- * 
+ *
  * @Java MOOC team, UC3M
  * @2.0
  */
@@ -33,14 +33,10 @@ public class Car
         slowDown();
         moveDown();
         accelerate();
-        car.printGarage();
+        Garage.printGarage();
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
-    }
-
-    private void printGarage() {
-
     }
 
     /**
@@ -79,8 +75,7 @@ public class Car
      */
     public static void moveDown() throws InterruptedException{
         String c = new String("\t\t\t\t  *");
-        for(int i=0; i<5; i++)
-        {
+        for(int i=0; i<5; i++){
             if(i!=4)
                 System.out.println(c);
             else
@@ -88,4 +83,5 @@ public class Car
             Thread.sleep(1000);
         }
     }
+
 }
